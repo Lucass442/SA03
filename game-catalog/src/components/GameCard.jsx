@@ -1,4 +1,4 @@
-function GameCard({ titulo, descricao, categoria, nota, ano }) {
+function GameCard({ titulo, descricao, categoria, nota }) {
   // Cores dinâmicas em estilo Neon Cyberpunk
   const coresCategoria = {
     RPG: "border-fuchsia-500 text-fuchsia-400 bg-fuchsia-950/40 shadow-[0_0_8px_rgba(217,70,239,0.3)]",
@@ -22,7 +22,7 @@ function GameCard({ titulo, descricao, categoria, nota, ano }) {
             {categoria}
           </span>
           <span className="text-xs font-bold text-amber-400 bg-black px-2 py-1 border border-amber-500/40">
-            ★ {nota}
+            ★ {nota}/5
           </span>
         </div>
 
@@ -31,11 +31,7 @@ function GameCard({ titulo, descricao, categoria, nota, ano }) {
           {titulo}
         </h2>
         
-        <p className="text-[11px] text-zinc-500 mb-3 uppercase">
-          RELEASE_YEAR: <span className="text-zinc-300">{ano}</span>
-        </p>
-
-        <p className="text-zinc-400 text-xs leading-relaxed border-t border-zinc-800/80 pt-3">
+        <p className="text-zinc-400 text-xs leading-relaxed border-t border-zinc-800/80 pt-3 mt-3">
           {descricao}
         </p>
       </div>

@@ -1,4 +1,9 @@
+import { useState } from "react";
+import Relogio from "./Relogio";
+
 function Header() {
+  const [mostrarRelogio, setMostrarRelogio] = useState(true);
+
   return (
     <header className="border-b-2 border-cyan-500 bg-black/90 px-6 py-4 shadow-[0_0_20px_rgba(6,182,212,0.15)] flex justify-between items-center font-mono">
       <div className="flex items-center gap-3">
@@ -10,6 +15,16 @@ function Header() {
             ABABA_ARCADE
           </h1>
         </div>
+      </div>
+
+      <div className="flex items-center gap-3">
+        {mostrarRelogio && <Relogio />}
+        <button
+          onClick={() => setMostrarRelogio(!mostrarRelogio)}
+          className="text-xs border border-cyan-500/70 text-cyan-300 hover:border-cyan-400 hover:text-cyan-200 px-3 py-1 rounded-lg transition-colors"
+        >
+          {mostrarRelogio ? "Esconder relógio" : "Mostrar relógio"}
+        </button>
       </div>
     </header>
   );
