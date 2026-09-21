@@ -37,39 +37,51 @@ function TaskForm({ onAdicionar }) {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="md:col-span-2">
-          <label className="block text-xs font-bold uppercase tracking-wider text-zinc-400 mb-2">
+          <label
+            htmlFor="campo-titulo"
+            className="block text-xs font-bold uppercase tracking-wider text-zinc-400 mb-2"
+          >
             Título
           </label>
           <input
+            id="campo-titulo"
             type="text"
             value={titulo}
             onChange={(e) => setTitulo(e.target.value)}
             placeholder="Ex: Elden Ring"
-            className="w-full border border-zinc-700 bg-black px-3 py-2 text-zinc-200 placeholder:text-zinc-500 focus:outline-none focus:border-cyan-400"
+            className="w-full border border-zinc-700 bg-black px-3 py-2 text-zinc-200 placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400"
           />
         </div>
 
         <div className="md:col-span-2">
-          <label className="block text-xs font-bold uppercase tracking-wider text-zinc-400 mb-2">
+          <label
+            htmlFor="campo-descricao"
+            className="block text-xs font-bold uppercase tracking-wider text-zinc-400 mb-2"
+          >
             Descrição
           </label>
           <textarea
+            id="campo-descricao"
             value={descricao}
             onChange={(e) => setDescricao(e.target.value)}
             placeholder="Descreva o jogo..."
             rows="3"
-            className="w-full border border-zinc-700 bg-black px-3 py-2 text-zinc-200 placeholder:text-zinc-500 focus:outline-none focus:border-cyan-400 resize-none"
+            className="w-full border border-zinc-700 bg-black px-3 py-2 text-zinc-200 placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 resize-none"
           />
         </div>
 
         <div>
-          <label className="block text-xs font-bold uppercase tracking-wider text-zinc-400 mb-2">
+          <label
+            htmlFor="campo-categoria"
+            className="block text-xs font-bold uppercase tracking-wider text-zinc-400 mb-2"
+          >
             Categoria
           </label>
           <select
+            id="campo-categoria"
             value={categoria}
             onChange={(e) => setCategoria(e.target.value)}
-            className="w-full border border-zinc-700 bg-black px-3 py-2 text-zinc-200 focus:outline-none focus:border-cyan-400"
+            className="w-full border border-zinc-700 bg-black px-3 py-2 text-zinc-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400"
           >
             <option value="Ação">Ação</option>
             <option value="Aventura">Aventura</option>
@@ -81,17 +93,21 @@ function TaskForm({ onAdicionar }) {
         </div>
 
         <div>
-          <label className="block text-xs font-bold uppercase tracking-wider text-zinc-400 mb-2">
+          <label
+            htmlFor="campo-nota"
+            className="block text-xs font-bold uppercase tracking-wider text-zinc-400 mb-2"
+          >
             Nota
           </label>
           <input
+            id="campo-nota"
             type="number"
             min="0"
             max="5"
             step="0.5"
             value={nota}
             onChange={(e) => setNota(e.target.value)}
-            className="w-full border border-zinc-700 bg-black px-3 py-2 text-zinc-200 focus:outline-none focus:border-cyan-400"
+            className="w-full border border-zinc-700 bg-black px-3 py-2 text-zinc-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400"
           />
         </div>
       </div>
@@ -99,7 +115,7 @@ function TaskForm({ onAdicionar }) {
       <div className="mt-5 flex justify-end">
         <button
           type="submit"
-          className="bg-cyan-500 hover:bg-cyan-400 text-black font-black px-5 py-2 uppercase tracking-wider transition-colors"
+          className="bg-cyan-500 hover:bg-cyan-400 text-black font-black px-5 py-2 uppercase tracking-wider transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-black"
         >
           + Adicionar Jogo
         </button>
