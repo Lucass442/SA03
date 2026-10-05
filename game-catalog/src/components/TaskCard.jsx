@@ -1,9 +1,3 @@
-const prioridadeEstilo = {
-  alta: "bg-red-100 text-red-700",
-  media: "bg-yellow-100 text-yellow-700",
-  baixa: "bg-emerald-100 text-emerald-700",
-};
-
 function TaskCard({ titulo, categoria, nota, concluida, onToggle, onRemover }) {
   return (
     <article
