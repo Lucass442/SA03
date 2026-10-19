@@ -11,7 +11,7 @@ function Header() {
           👾
         </div>
         <div>
-          <h1 className="text-xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-amber-400 uppercase">
+          <h1 className="text-2xl font-bold font-display text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-amber-400 uppercase">
             ABABA_ARCADE
           </h1>
         </div>
